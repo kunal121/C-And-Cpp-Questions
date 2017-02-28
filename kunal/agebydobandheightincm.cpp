@@ -3,7 +3,7 @@
 using namespace std;
 class data
 {
-char c[10];
+
 float a;
 int b;
 public:
