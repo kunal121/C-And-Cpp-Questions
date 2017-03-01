@@ -44,9 +44,20 @@ class result:public marks
 };
 int main()
 {
- string Nikhil,cse;
+ char name[50],branch[50];
+ int roll,m1,m2,m3;
 
-    result ob("Nikhil","cse",1510991408,45,67,89);
+   cout<<"enter name"<<endl;
+   cin.getline(name,50);
+   cout<<"enter branch"<<endl;
+   cin>>branch;
+   cout<<"enter roll no."<<endl;
+   cin>>roll;
+   cout<<"enter marks"<<endl;
+   cin>>m1>>m2>>m3;
+
+
+    result ob(name,branch,roll,m1,m2,m3);
     ob.Name::display();
     ob.marks::display();
 }
