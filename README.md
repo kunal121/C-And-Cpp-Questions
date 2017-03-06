@@ -5,5 +5,5 @@
 ####2.![Manan](https://github.com/kunal121/C-And-Cpp-Questions/tree/master/Manan)
 ####3.![Kartik](https://github.com/kunal121/C-And-Cpp-Questions/tree/master/Kartik)
 ####4.![Nikhil Bansal](https://github.com/kunal121/C-And-Cpp-Questions/tree/master/Nikhil%20Bansal)
-####5.![Ayaan](https://github.com/ayaanfaiz)
+####5. <a href="https://github.com/ayaanfaiz">Ayaan Faiz</a>
 
