@@ -671,4 +671,36 @@ EXP 17 :
         7.  ip -> performs manipulation of ip addresses
                         ip 192.168.4.2
                -> suppress binary o/p
-        
+               
+    
+    FINGER : user info lookup program.
+             if no argument passed , displays info about current user
+             
+             options : -s -> displays user login name, real name , terminal name , idle name ,  login name 
+             
+    WGET : commandline utility to download files from internet
+                    http://wordpress.org/latest.zip
+
+            options : 
+                1. to change name of downloaded file.
+                        wget -o wordpress.zip http........
+                2. to specify download speed
+                        wget --limit-rate=100k http......
+                3. -c -> to continue download from where it stopped
+                4. -b -> to make big downloads as background processes.
+                
+    IPCONFIG :  interface configuration
+                used to view or configure the network interface
+                ipconfig -> displays info about all n/w interfaces currently in option
+                1. to view all interfaces -> ifconfig -a
+                2. to view configuration of specific interface -> ifconfig eth0
+                3. enabling or disabling interface -> ifconfig eth0 up/down
+                4. configuring an interface -> ifconfig wlan 69.72.169.1
+                
+    IP : similar to ifconfig
+         ip addr show -> to get depth info
+         ip route show -> check route table
+         ip link set eth0 up/down -> enable/disable a new interface
+         
+    ROUTE : show / manipulate ip routing tables.
+                
