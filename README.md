@@ -1,9 +1,10 @@
 # C-And-Cpp-Questions
 > This repository contains C and C++ questions for pratice.
 ##Contributors:
-####1.![Kunal](https://github.com/kunal121/C-And-Cpp-Questions/tree/master/kunal)
-####2.![Manan](https://github.com/kunal121/C-And-Cpp-Questions/tree/master/Manan)
-####3.![Kartik](https://github.com/kunal121/C-And-Cpp-Questions/tree/master/Kartik)
-####4.![Nikhil Bansal](https://github.com/kunal121/C-And-Cpp-Questions/tree/master/Nikhil%20Bansal)
-####5. <a href="https://github.com/ayaanfaiz">Ayaan Faiz</a>
+####1. <a href="https://github.com/kunal121">Kunal</a>
+####2. <a href="https://github.com/manangarg899">Manan</a>
+####3. <a href="https://github.com/kartikgandhi">Kartik</a>
+####4. <a href="https://github.com/nikhil16-bhaskar">Nikhil Bhaskar</a>
+####5. <a href="https://github.com/nikhilbansal97">Nikhil Bansal</a>
+####6. <a href="https://github.com/ayaanfaiz">Ayaan Faiz</a>
 
