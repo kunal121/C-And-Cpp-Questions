@@ -673,6 +673,9 @@ EXP 17 :
                -> suppress binary o/p
                
     
+EXPERIMENT 18 : 
+---------------
+    
     FINGER : user info lookup program.
              if no argument passed , displays info about current user
              
@@ -702,5 +705,57 @@ EXP 17 :
          ip route show -> check route table
          ip link set eth0 up/down -> enable/disable a new interface
          
+         
     ROUTE : show / manipulate ip routing tables.
+            display existing route
+                
+                OPTIONS :
+                    >   -n : to display numerical ip address
+                    
+                To add default gateway -> route add default gw 192.168.1.0
+
+    WRITE : sends message to another user
+                    allows you to communicate by copying from your terminal to another 
+                    
+                    write [user-name] [H4]      Ctrl+c to end message 
+                    
+    MESG : controls write access to your terminal
+    
+            mesg [n/y]
+            
+            > mesg : displays current status of terminal
+            > mesg Y : allows user to send your message
+            
+    
+    IPTABLES : Displays policy rules to allow or block traffic 
+        3 types : 
+            >   input : to control behaviour of incoming connection
+            >   forward : forward incoming connection to its target
+            >   output : for outgoing connection
+            
+            iptables -L 
+            
+    MAIL : send and receive mail 
+    
+        sudo apt-get update mailutils
+
+        
+EXPERIMENT 19 : ADDING OR REMOVING USER
+
+    1. adduser : sudo adduser <username>
+    2. su : to switch between b/w users
+                su <username>
+    3. usermod : to add a user to group
+                    usermod -aG sudo <username>
+            
+    4. userdel : to delete user
+                    userdel <username>
+            
+    5. username : to change password if logged in as root
+                    username <new password>
+    6. password : change password if logged in as user
+                    password <username>
+    7. to create or delete groups : 
+                groupadd <username>
+                groupdel <groupname>
                 

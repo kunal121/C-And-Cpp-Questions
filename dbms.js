@@ -255,6 +255,17 @@ SINGLE ROW SQL FUCNTIONS :
                                          
                                      TRUNC  (45.926 , 2) --> 45.92
                                      MOD (1600 , 300 ) --> 10
+
+CONVERSION FUNCTION :
+---------------------
+    
+    >   to_date -> ('date to convert' , 'format mask eg:yyyy-mm-dd') there are 40 format mask available
+    >   to_char -> convert date or timestamp to string 
+    >   to_number -> convert string to number.
+    
+            to_char(to_date("03-05-2016",'yyyy-month,dd'))
+    
+            date'2016-03-16' -> to convert ot date format.
                                      
     
     
