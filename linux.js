@@ -758,4 +758,65 @@ EXPERIMENT 19 : ADDING OR REMOVING USER
     7. to create or delete groups : 
                 groupadd <username>
                 groupdel <groupname>
+            
+EXPERIMENT 22 :
+            
+PROCESS ORIENTED COMMANDS
+-------------------------
+            
+            1. ps : displays status of currently running processes
+                    shows processes associated with current user & terminal session
+            2. ps aux : shows owner of processes
+            3. ps -ag : to get info about all running processes
+            4. ps -f : displays info in long format with parent process.
+            5. pstree : displays tree of processes
+            6. ps ax | grep : to see if a particular process is running or not
+            7. top : displays processes dynamical (to exit enter q)
+            8. kill : sends a signal to process
+                      by default , signal is to terminate
+                    
+                    > kill [pid]
+                    > killall [process-name] : to stop process by  process name
+                    > kill 0 : to kill all processes except your shell
+                    > kill -l : display number of each signal 
+                        ex : kill -9 
+
+EXP 21 :
+
+        INTRO TO NETWORKS 
+        -----------------
+            
+            Steps to configure a network interface
+                > ifconnfig
+                > ping
+                > traceroute
+            
+        Browers in Ubuntu 
+        -----------------
                 
+            > Firefox 
+            > Chromium 
+            > Opera
+            > Dillo
+            > Konqeron
+            
+            
+        TRANSFERING FILES FROM UBUNTU TO WINDOWS
+        ----------------------------------------
+            
+            > right click on folder and select 'sharing options'
+            > when prompted, install samba services
+            > after innstallation, restart session
+            > click 'create share' to complete process
+            > open terminal 
+                sudo smbpasswd -a <user-name>
+            > on windows 
+                run \\ip-address\filename
+            > To access file
+                enter samba username & password
+            
+            
+            
+            
+            
+            
