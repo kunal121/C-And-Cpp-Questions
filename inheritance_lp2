@@ -1,0 +1,88 @@
+#include <map>
+#include <set>
+#include <list>
+#include <cmath>
+#include <ctime>
+#include <deque>
+#include <queue>
+#include <stack>
+#include <string>
+#include <bitset>
+#include <cstdio>
+#include <limits>
+#include <vector>
+#include <climits>
+#include <cstring>
+#include <cstdlib>
+#include <fstream>
+#include <numeric>
+#include <sstream>
+#include <iostream>
+#include <algorithm>
+#include <unordered_map>
+using namespace std;
+class Square;
+class Cube;
+class Number
+{    private:
+        int num;
+    public:
+        Number(int x); 
+        int returnNumber();
+        };
+Number::Number(int x)
+    {
+    //int num;
+num=x;
+}
+int Number::returnNumber()
+{
+    return num;
+}
+class Square:public Number
+    {
+    public:
+    Square(int x):Number(x)
+    {
+        
+    }
+    
+ int getSquare()
+     {
+     int s;
+     int num=returnNumber();
+    s=num*num;
+     return s;
+ }
+};
+class Cube:public Number
+    {
+    public:
+    Cube(int x):Number(x)
+    {
+        
+    }
+    int getCube()
+        {
+        int c,num=returnNumber();
+        c=num*num*num;
+        return c;
+    }
+};
+int main()
+    {
+    int sqr,cube,a;
+    
+    cin>>a;
+    Square *objS=new Square(a);
+    Cube *objC=new Cube(a);
+  
+    //delete objS;
+   // delete objC;
+   
+        //sqr and cube are integer variables.
+        sqr =objS->getSquare();//objS is a pointer of Square class
+        cout << "Square of "<< objS->returnNumber() << " is: " << sqr  << endl;    
+        cube=objC->getCube();//objC is a pointer of Cube class
+        cout << "Cube   of "<< objS->returnNumber() << " is: " << cube << endl;
+}
