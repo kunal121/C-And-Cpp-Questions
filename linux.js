@@ -818,5 +818,44 @@ EXP 21 :
             
             
             
+EXPERIMENT 23 : 
             
+        Process Scheduing Commands
+        --------------------------
             
+            1. at : schedling command to be run once at a particular time
+                        ex : at 9:30pm
+                             at > ls -l > terminal name (search using tty)
+                             at > Ctrl + D
+            
+            EXPRESSION FOR TIME :
+                
+                > noon
+                > midnight
+                > tomorrow
+                > noon tomorrow
+                > next week
+                > next monday
+            
+                    now + 1 min
+                    now + 2 days
+                    now + 1 month
+                    now + 5 years
+            
+                    2:30pm friday
+                    fri
+                    Nov
+                    2.30 pm 10/21/2014
+                
+                USING MAIL : 
+            
+                    > Install MTA
+                    > sudo service sendmail start
+                    > at now + 2 min
+                        at > echo 'hello'
+                        at > Ctrl + D
+                    > mutt -f /var/spool/mail/<username>
+
+            2. atq : to view currently queued at jobs
+            3. atrm : to delete jobs
+                    atrm 23
