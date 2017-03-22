@@ -269,6 +269,34 @@ CONVERSION FUNCTION :
                                      
     
     
+AGGREGATEOR MULTIPLE FUNCTIONS : 
+        
+    >   Count : Count no of rows in a column. (it will ignore the null values)
+            ex  : count(salary) : it will not include null values
+                  count(*) : it will include null values
+                  count(all salary) : it will also not include null values
+                  count(distinct salary) : exclude the duplicate values
+                  
+    >   Sum : Addition of rows of column
+            ex : sum(salary) : it will sum all the rows in salary column
+            
+    >   Avg : Average of rows
+    
+    >   Max : Maximum value in the column
+    
+    >   Min : Minimum value in column 
+    
+    >   Clauses : 
+        
+        > group by clause : groupby(serialNo) 
+                            It cannot be applied on multiple columns
+                            
+        > having : check condition just like where clause
+                   aggregate functions cannot be used in where clause but they can be used in having clause.
+                   
+        > order by : Order by asc col_name : ascending order
+                     Order by dsc col_name : ascending order
+                     Order by null last col_name : ascending order
                         
     
     

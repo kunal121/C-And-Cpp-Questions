@@ -673,6 +673,9 @@ EXP 17 :
                -> suppress binary o/p
                
     
+EXPERIMENT 18 : 
+---------------
+    
     FINGER : user info lookup program.
              if no argument passed , displays info about current user
              
@@ -702,5 +705,157 @@ EXP 17 :
          ip route show -> check route table
          ip link set eth0 up/down -> enable/disable a new interface
          
+         
     ROUTE : show / manipulate ip routing tables.
+            display existing route
                 
+                OPTIONS :
+                    >   -n : to display numerical ip address
+                    
+                To add default gateway -> route add default gw 192.168.1.0
+
+    WRITE : sends message to another user
+                    allows you to communicate by copying from your terminal to another 
+                    
+                    write [user-name] [H4]      Ctrl+c to end message 
+                    
+    MESG : controls write access to your terminal
+    
+            mesg [n/y]
+            
+            > mesg : displays current status of terminal
+            > mesg Y : allows user to send your message
+            
+    
+    IPTABLES : Displays policy rules to allow or block traffic 
+        3 types : 
+            >   input : to control behaviour of incoming connection
+            >   forward : forward incoming connection to its target
+            >   output : for outgoing connection
+            
+            iptables -L 
+            
+    MAIL : send and receive mail 
+    
+        sudo apt-get update mailutils
+
+        
+EXPERIMENT 19 : ADDING OR REMOVING USER
+
+    1. adduser : sudo adduser <username>
+    2. su : to switch between b/w users
+                su <username>
+    3. usermod : to add a user to group
+                    usermod -aG sudo <username>
+            
+    4. userdel : to delete user
+                    userdel <username>
+            
+    5. username : to change password if logged in as root
+                    username <new password>
+    6. password : change password if logged in as user
+                    password <username>
+    7. to create or delete groups : 
+                groupadd <username>
+                groupdel <groupname>
+            
+EXPERIMENT 22 :
+            
+PROCESS ORIENTED COMMANDS
+-------------------------
+            
+            1. ps : displays status of currently running processes
+                    shows processes associated with current user & terminal session
+            2. ps aux : shows owner of processes
+            3. ps -ag : to get info about all running processes
+            4. ps -f : displays info in long format with parent process.
+            5. pstree : displays tree of processes
+            6. ps ax | grep : to see if a particular process is running or not
+            7. top : displays processes dynamical (to exit enter q)
+            8. kill : sends a signal to process
+                      by default , signal is to terminate
+                    
+                    > kill [pid]
+                    > killall [process-name] : to stop process by  process name
+                    > kill 0 : to kill all processes except your shell
+                    > kill -l : display number of each signal 
+                        ex : kill -9 
+
+EXP 21 :
+
+        INTRO TO NETWORKS 
+        -----------------
+            
+            Steps to configure a network interface
+                > ifconnfig
+                > ping
+                > traceroute
+            
+        Browers in Ubuntu 
+        -----------------
+                
+            > Firefox 
+            > Chromium 
+            > Opera
+            > Dillo
+            > Konqeron
+            
+            
+        TRANSFERING FILES FROM UBUNTU TO WINDOWS
+        ----------------------------------------
+            
+            > right click on folder and select 'sharing options'
+            > when prompted, install samba services
+            > after innstallation, restart session
+            > click 'create share' to complete process
+            > open terminal 
+                sudo smbpasswd -a <user-name>
+            > on windows 
+                run \\ip-address\filename
+            > To access file
+                enter samba username & password
+            
+            
+            
+            
+EXPERIMENT 23 : 
+            
+        Process Scheduing Commands
+        --------------------------
+            
+            1. at : schedling command to be run once at a particular time
+                        ex : at 9:30pm
+                             at > ls -l > terminal name (search using tty)
+                             at > Ctrl + D
+            
+            EXPRESSION FOR TIME :
+                
+                > noon
+                > midnight
+                > tomorrow
+                > noon tomorrow
+                > next week
+                > next monday
+            
+                    now + 1 min
+                    now + 2 days
+                    now + 1 month
+                    now + 5 years
+            
+                    2:30pm friday
+                    fri
+                    Nov
+                    2.30 pm 10/21/2014
+                
+                USING MAIL : 
+            
+                    > Install MTA
+                    > sudo service sendmail start
+                    > at now + 2 min
+                        at > echo 'hello'
+                        at > Ctrl + D
+                    > mutt -f /var/spool/mail/<username>
+
+            2. atq : to view currently queued at jobs
+            3. atrm : to delete jobs
+                    atrm 23
