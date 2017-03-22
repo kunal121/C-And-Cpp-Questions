@@ -293,17 +293,25 @@ AGGREGATEOR MULTIPLE FUNCTIONS :
                             
         > having : check condition just like where clause
                    aggregate functions cannot be used in where clause but they can be used in having clause.
-                   
+           
         > order by : Order by asc col_name : ascending order
                      Order by dsc col_name : ascending order
                      Order by null last col_name : ascending order
                         
     
-    
-    
-    
-    
-    
-    
-    
-    
+    SUBQUERY OR NESTED QUERY : 
+            
+        > Subquery must be enclosed between parenthesis. 
+        > It must be placed on the right side of comparison operator
+        > We cannot use order by clause in subquery
+        > Use single row operator with single row subquery
+        > If a subquery returns a null value to outer query , the outer query will not return any rows when using certain compariosn operator in where clause
+        
+        TYPES : 
+            > Single Row
+                > find detail of all employees whose salary is more than blake
+            > Multiple Row
+                >
+            > Multiple column 
+                >
+            
