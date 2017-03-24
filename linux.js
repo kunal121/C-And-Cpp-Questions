@@ -406,7 +406,7 @@ Program that stimulates as a standalone TERMINAL
 
     >  Add break points
 
-    	break [filename]:line-number
+    	break [filename]:line-numbertime
     or
     	break f1.c : main <-(func name)
 
@@ -449,7 +449,7 @@ Types of files:
     special files (c) : character files , allows user to communicate with h/w devices 
                         ls -c /dev
     Sockets (s) : special files , similar to TCP/IP sockets provide IPC
-                    ls -l /dev/log
+                    ls -s /dev/log
     Named pipe (p) : acts more or like , form a way of process
     Symbolic links (l) : can be considered as pointer to original files
     Block device files (b) : provides access to device in such a way that h/w characteristics of device are not visible.
@@ -505,7 +505,7 @@ PATCH FILE :
             diff -u file1 file2 > f3.patch
     2. Apply patch using patch command 
             takes patch file as input and applies the difference to one or more original file
-            patch < f3.patch
+            patch filename < f3.patch
     
 GEDIT :
 
@@ -626,7 +626,7 @@ EXP 17 :
                               \n -> new line
                               \t -> horizontal tab
                               \v -> vertical tab
-                              \r -> carriage return
+                              \r -> carriage retadduurn
                               \c -> supresses
                               
         2.  host -> DNS lookup uility.
@@ -647,7 +647,7 @@ EXP 17 :
                      ex : nslookup google.com
                           nslookup 134.170.185.46
                           
-                          Quering different records : nslookup -types=ns google.com
+                          Quering different records : nslookup -type=ns google.com
         
         4.  ping -> to test connectivity between 2 nodes
                  -> ping google.com
@@ -670,7 +670,7 @@ EXP 17 :
                     
         7.  ip -> performs manipulation of ip addresses
                         ip 192.168.4.2
-               -> suppress binary o/p
+               -> a suppress binary o/p
                
     
 EXPERIMENT 18 : 
@@ -694,7 +694,7 @@ EXPERIMENT 18 :
                 
     IPCONFIG :  interface configuration
                 used to view or configure the network interface
-                ipconfig -> displays info about all n/w interfaces currently in option
+            config -> displays info about all n/w interfaces currently in option
                 1. to view all interfaces -> ifconfig -a
                 2. to view configuration of specific interface -> ifconfig eth0
                 3. enabling or disabling interface -> ifconfig eth0 up/down
@@ -745,7 +745,7 @@ EXPERIMENT 19 : ADDING OR REMOVING USER
     1. adduser : sudo adduser <username>
     2. su : to switch between b/w users
                 su <username>
-    3. usermod : to add a user to group
+    3. usermod : to add a user to group 
                     usermod -aG sudo <username>
             
     4. userdel : to delete user
@@ -768,11 +768,12 @@ PROCESS ORIENTED COMMANDS
                     shows processes associated with current user & terminal session
             2. ps aux : shows owner of processes
             3. ps -ag : to get info about all running processes
-            4. ps -f : displays info in long format with parent process.
+            4. ps -f : displays `` info in long format with parent process.
             5. pstree : displays tree of processes
-            6. ps ax | grep : to see if a particular process is running or not
+            6.txt ps ax | grep : to see if a particular process is running or not
             7. top : displays processes dynamical (to exit enter q)
-            8. kill : sends a signal to process
+            8. kill : sends a signal to processcd ..
+            
                       by default , signal is to terminate
                     
                     > kill [pid]
@@ -795,7 +796,7 @@ EXP 21 :
         -----------------
                 
             > Firefox 
-            > Chromium 
+            > Chromiumclea
             > Opera
             > Dillo
             > Konqeron
@@ -859,3 +860,10 @@ EXPERIMENT 23 :
             2. atq : to view currently queued at jobs
             3. atrm : to delete jobs
                     atrm 23
+            
+            
+    EXPERIMENT 24 : 
+            
+            > CRONTAB COMMAND : list of commands that you want to run on a regular schedule and also the name of command used to manage that list
+            
+                To edit crontab : crontab -e
