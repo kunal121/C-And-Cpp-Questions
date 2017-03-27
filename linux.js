@@ -717,7 +717,7 @@ EXPERIMENT 18 :
     WRITE : sends message to another user
                     allows you to communicate by copying from your terminal to another 
                     
-                    write [user-name] [H4]      Ctrl+c to end message 
+                    write [user-name] [message]      Ctrl+c to end message 
                     
     MESG : controls write access to your terminal
     
