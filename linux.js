@@ -867,3 +867,58 @@ EXPERIMENT 23 :
             > CRONTAB COMMAND : list of commands that you want to run on a regular schedule and also the name of command used to manage that list
             
                 To edit crontab : crontab -e
+
+	EXPERIMENT 25 : 
+			
+	> sort : sotrs contents of a file, line by line
+					 sorted numerically and alphabetically
+			
+		Rules : 
+			> lines starting with num apprear first
+			> lines starting with a letter appearing earlier in alphabets will appear before
+			> line with lowercas letter appears before uppercase letter
+			
+
+	> grep
+	> diff
+	> uniq : filters out repeated lines in a file
+
+		uniq <file-name>
+	
+		options : 
+			-c : prefixes lines with no. of occurences
+			-r : print duplicate lines only
+			-u : prints unique lines		
+
+	> more : filter for crt viewing
+			 displays text, one screen at a time
+				more filename
+
+		options : 
+		 > -num : no of lines to be displayed
+		 > more +3 file : displays contents of file from line 3
+		 > more +/"string" file : displays contents of file with "string"
+
+
+	> redirection operators : 
+		to redirect o/p or i/p somewhere else 
+		> command o/p to file or device
+		 	ls -l > f1
+		< reads command i/p from a line
+			grep "a" < f1
+		<< appends the command o/p to end of filel
+		
+
+		\ -> reads o/p fromone command & writes it as i/p to another command
+
+				ls \ grep "f"
+			 
+
+    
+
+
+	
+
+
+
+
