@@ -1,4 +1,5 @@
 #include<iostream>
+#include<string.h>
 using namespace std;
 int size;
 class test
