@@ -3,66 +3,54 @@ using namespace std;
 class room
 {
 protected:
-    int length,width,height;
+    int length[3],width[3],height[3],i;
 public:
     void inputDetails()
-    {
-        cin>>length>>width>>height;
+    {for(i=0; i<3; i++)
+
+        cin>>length[i]>>width[i]>>height[i];
     }
     void displayDetails()
     {
-        cout<<"Length="<<length<<endl<<"Breath="<<width<<endl<<"Height="<<height;
-    }
+     for(i=0; i<3; i++)
+       { cout<<endl<<"Room Details="<<i+1<<endl;
+        cout<<"Length="<<length[i]<<endl<<"Breath="<<width[i]<<endl<<"Height="<<height[i];
+       }}
 };
-class address
+class address:public room
 {
 protected:
     int Hno;
     char city[20],state[20];
-    room r[3];
 public:
     void input()
     {
         cin>>Hno>>city>>state;
-        for(int i=0; i<3; i++)
-            r[i].inputDetails();
+        inputDetails();
     }
     void display()
     {
         cout<<"House No="<<Hno<<endl<<"City="<<city<<endl<<"State="<<state<<endl<<"Address is:";
-        for(int i=0; i<3; i++)
-        {
-            cout<<endl<<"Room Details="<<i+1<<endl;
-            r[i].displayDetails();
-        }
-
+        displayDetails();
     }
 };
-class house
+class house:public room
 {
 protected:
     char HouseName[20];
-    room x[3];
 public:
     void input()
     {
-        cin>>HouseName;
-        for(int i=0; i<3; i++)
-        {
-            x[i].inputDetails();
-        }
+        cin.ignore();
+        cin.getline(HouseName,20);
+        inputDetails();
     }
     void display()
     {
-        cout<<"House name="<<HouseName<<" House"<<endl<<"Address is:";
-        for(int i=0; i<3; i++)
-        {
-            cout<<endl<<"Room Details="<<i+1<<endl;
-            x[i].displayDetails();
-        }
+        cout<<"House name="<<HouseName<<endl<<"Address is:";
+        displayDetails();
     }
 };
-
 int main()
 {
     int option;
