@@ -862,13 +862,11 @@ EXPERIMENT 23 :
                     atrm 23
             
             
-    EXPERIMENT 24 : 
-            
             > CRONTAB COMMAND : list of commands that you want to run on a regular schedule and also the name of command used to manage that list
             
                 To edit crontab : crontab -e
 
-	EXPERIMENT 25 : 
+	EXPERIMENT 24 : 
 			
 	> sort : sotrs contents of a file, line by line
 					 sorted numerically and alphabetically
@@ -914,10 +912,54 @@ EXPERIMENT 23 :
 				ls \ grep "f"
 			 
 
-    
+    EXPERIMENT 25 : Bash Shell Scripting
+    ------------------------------------
+                
+            Shell : Interface which is used to command the kernel to so some work.
+                types : bash
+                        csh
+                        ksh
+                        tsch
+            
+            To find all available shells : cat /etc/shell
+            To find your current shell type : echo $SHELL
+            
+            Shell Script : 
+                    series of commands written on plain text file
+            Features : automates task
+                       provides controlled interfae to users 
+                       create new commands using combinations of utilities 
+                       prototyping. 
+            SYNTAX :
+                # -> comment (except \# , #!)
+                \ -> used at end of line,to indicate continuation to next line
+                ; -> used to interpret what follows is a command
+                $ -> indicates what follows is a variable
+            
+            STEPS : 
+            
+            1. first.sh ->  #! /bin/sh (specify on which shell you are working)
+                            #comment
+                            echo "hello world"
+                            Save the .sh file and open terminal
+            2. grant permissions ->  chmod +x first.sh
+            3. execute the .sh file -> ./first.sh
+            
+            System & User defined variables -: 
+                    1. System variable : 
+                            pwd
+                            bash
+                            ostype
+                            home
+                            username
+                            shell
 
-
-	
+            user defined variables : created and maintained by user
+                                        VAR=value
+                                    example : 
+                                            #! /bin/sh
+                                            MY_VAR = "Hello World"
+	                                        echo $MY_VAR
 
 
 
