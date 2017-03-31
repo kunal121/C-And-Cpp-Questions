@@ -1,5 +1,4 @@
 #include <iostream>
-
 using namespace std;
 class bill
 {
@@ -52,8 +51,6 @@ class cash:protected bill
         else
             cout<<"Clear";
     }
-        
-    
 };
 int main()
 {
@@ -71,6 +68,4 @@ int main()
 		d.get_cash();
 		d.display();
 	}
-	return 0;
 }
-    
