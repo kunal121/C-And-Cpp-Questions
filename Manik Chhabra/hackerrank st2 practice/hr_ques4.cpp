@@ -56,7 +56,6 @@ int main()
     Cube *objC;
     objC=&ob1;
        
-        //sqr and cube are integer variables.
         sqr =objS->getSquare();//objS is a pointer of Square class
         cout << "Square of "<< objS->returnNumber() << " is: " << sqr  << endl;    
         cube=objC->getCube();//objC is a pointer of Cube class
