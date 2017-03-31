@@ -59,5 +59,4 @@ int main(void)
     c.getIMarks();
     c.getEMarks();
     c.Display();
-    return 0;
 }
