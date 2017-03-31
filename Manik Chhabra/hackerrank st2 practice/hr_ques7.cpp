@@ -42,5 +42,4 @@ int main()
     o1->getData();
     cout<<"Area of square: " << o->calculateArea();
     cout << "\nArea of circle: " << o1->calculateArea(); //o and o1 are pointer of Shape class
-    return 0;
 }
