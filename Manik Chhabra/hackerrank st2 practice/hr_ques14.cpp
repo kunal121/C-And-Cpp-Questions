@@ -38,6 +38,4 @@ int main()
     A2.getdata();
     A3=A1+A2;
     A3.putdata();
-
-    return 0;
 }
