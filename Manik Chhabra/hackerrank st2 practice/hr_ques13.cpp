@@ -47,5 +47,4 @@ int main()
     seller ob;
     ob.caldiscount();
     ob.show();
-    return 0;
 }
