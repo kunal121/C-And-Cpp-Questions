@@ -45,5 +45,4 @@ int main()
     //cin>>a2;
     a3=a1+a2;
     //cout<<a3;
-    return 0;
 }
