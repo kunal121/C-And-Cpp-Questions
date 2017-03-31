@@ -1,6 +1,5 @@
 #include <iostream>
-#include <cstring>
-#include <string>
+#include <string.h>
 using namespace std;
 class string1
 {
@@ -42,11 +41,9 @@ string1::~string1()
 }
 int main()
 {
-
 	char newstr[100];
 	cin>>newstr;
 	string1 str1(newstr);
 	str1.decrypt();
     str1.show_string1();
-	return 0;
 }
