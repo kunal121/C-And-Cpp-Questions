@@ -1,5 +1,4 @@
 #include <iostream>
-
 using namespace std;
 class room
 {
@@ -64,7 +63,7 @@ class house:public room
 int main()
 {
     int option;
-    //cout<<"enter 1 for (address+room) and 2 for (house+room)"<<endl;
+    //cout<<"enter 1 for (address+room) and 2 for (house+room)";
      cin>>option;
      if(option==1)
      {
