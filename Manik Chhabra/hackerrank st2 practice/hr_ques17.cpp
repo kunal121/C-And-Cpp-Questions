@@ -52,5 +52,4 @@ int main()
     p.get_per_data();
     c.show_cont_data();
     p.show_per_data();
-    return 0;
 }
