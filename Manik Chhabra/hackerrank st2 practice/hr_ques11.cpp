@@ -55,5 +55,4 @@ int main()
     ob.get_b_data();
     ob.transfer();
     ob.print();
-
 }
