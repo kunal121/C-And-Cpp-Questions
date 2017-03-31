@@ -35,5 +35,4 @@ int main()
     l.get_m();
     l.get_n();
     l.display();
-    return 0;
 }
