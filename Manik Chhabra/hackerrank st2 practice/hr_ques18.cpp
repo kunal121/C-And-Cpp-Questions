@@ -47,5 +47,4 @@ int main()
     cin>>m1>>m2>>m3;
     result r(rno,course,m1,m2,m3);
     r.display();
-    return 0;
 }
