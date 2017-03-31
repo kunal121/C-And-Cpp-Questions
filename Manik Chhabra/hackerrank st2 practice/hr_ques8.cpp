@@ -54,5 +54,4 @@ int main() {
         
     }
     Result r(imarks,emarks);
-    return 0;
 }
