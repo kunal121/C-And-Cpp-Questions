@@ -58,5 +58,4 @@ int main()
         cout<<"Wrong Input";
     else
         emp->printEmployeeInfo();
-    return 0;
 }
