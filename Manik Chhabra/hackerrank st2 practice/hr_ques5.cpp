@@ -14,7 +14,7 @@ public:
 
 void Student::get_num(int x)
 {
-    roll = x;
+    roll=x;
 }
 void Student::put_num()
 {
