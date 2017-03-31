@@ -1,6 +1,5 @@
 #include <iostream>
 #include<string.h>
-
 using namespace std;
 class Student
 {
@@ -49,5 +48,4 @@ int main() {
         
     }
     Result r(rno,name,marks);
-    return 0;
 }
