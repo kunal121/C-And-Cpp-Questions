@@ -39,7 +39,6 @@ class cash:public bill
             cout<<deno[i]<<"\n"<<value[i]<<"\n";
         }
     }
-    
 };
 class cheque:public bill
 {
