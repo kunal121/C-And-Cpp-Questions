@@ -27,7 +27,8 @@ test operator+(test o,test o1)
     o.input();
     o1.input();
     test t;
-    for(int i=0; i<size; i++){
+    for(int i=0; i<size; i++)
+    {
         t.arr[i] = o.arr[i] + o1.arr[i];
         if(t.arr[i]>100)
             t.arr[i]-=100;
@@ -44,5 +45,4 @@ int main()
     //cin>>a2;
     a3=a1+a2;
     //cout<<a3;
-    return 0;
 }
