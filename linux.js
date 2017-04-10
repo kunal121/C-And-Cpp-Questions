@@ -961,6 +961,114 @@ EXPERIMENT 23 :
                                             MY_VAR = "Hello World"
 	                                        echo $MY_VAR
 
+            
+        mathemaics      operations
+            -eq         ==
+            -ne         !=
+            -lt         <
+            -le         <=
+            -gt            >
+            -ge         >=
+            
+            
+            
+            
+        Flow control
+            
+            1.   if<condition>
+                then
+                fi(end)
+            
+            2 . if <condition>
 
+                then
+                else
+                fi
+            
+            3 . if<condition>
+                then
+                elif<condition>
+                then
+                fi(end)
+            
+            
+    
+            eg    !/bin/sh
+            num =0
+            if[$num = = 0]
+            then 
+            echo "hello"
+            fi
+           
+            
+            exit =  sets the exi status when scripts finishes
+            
+                    exit 0 = exits your scope & sets exit to 0
+                    exit 1 = failure (sets to 1)
+            
+            
+            
+        Q . ques find even or odd through if condition
+            
+            #! /bin/sh
+            echo "enter variable"
+            read var
+            if [ $(( $var % 2 )) -eq 0 ]
+            then 
+            echo "even"
+            else
+            echo "odd"
+            fi
 
-
+        
+    Command Line arguments
+            
+            
+            $0 - script/file name
+            $1 - first argument 
+            $2 - second argument
+            $n - nth argument
+            $@ - all argument
+            $# - count all argument
+            
+            
+    rules:
+            contains alphabets digits & underscore 
+            no commas or blanks ./f1.sh 1 2
+            first character must be alphabet or number
+            
+            
+            
+    ques: command line input 2 number and sum their values
+            
+            #! /bin/sh
+            n=$1
+            n1=$2
+            echo $((n+n1))
+            if[ $# -eq 0 ]
+            then 
+            echo "command is incomplete"
+            else 
+            echo "command run successfully"
+            fi
+            
+            
+    ques: greatest of two numbers
+            
+            #! /bin/sh
+            n=$1
+            n1=$2
+            n2=$3
+            if [ n -gt n1 ] && [ n -gt n2]
+            then 
+            echo n
+            elif[ n1 -gt n2 ] && [ n1 -gt n ]
+            then
+            echo n1
+            else 
+            echo n2
+            fi
+            fi
+            
+            
+    
