@@ -1059,7 +1059,7 @@ EXPERIMENT 23 :
             n=$1
             n1=$2
             n2=$3
-            if [ n -gt n1 ] && [ n -gt n2]
+            if [ n -gt n1 ] && [ n -gt n2 ]
             then 
             echo n
             elif[ n1 -gt n2 ] && [ n1 -gt n ]
