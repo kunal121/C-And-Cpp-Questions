@@ -1059,14 +1059,14 @@ EXPERIMENT 23 :
             n=$1
             n1=$2
             n2=$3
-            if [ n -gt n1 ] && [ n -gt n2 ]
+            if [ $n -gt $n1 ] && [ $n -gt $n2 ]
             then 
-            echo n
-            elif[ n1 -gt n2 ] && [ n1 -gt n ]
+            echo $n
+            elif[ $n1 -gt $n2 ] && [ $n1 -gt $n ]
             then
-            echo n1
+            echo $n1
             else 
-            echo n2
+            echo $n2
             fi
             fi
             
