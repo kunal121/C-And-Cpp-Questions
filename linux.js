@@ -1068,7 +1068,57 @@ EXPERIMENT 23 :
             else 
             echo $n2
             fi
-            fi
+    
             
+            
+            
+            
+    while loop 
+            
+            while<condition>
+            do
+                #statements
+            DocumentFragment
+            
+            
+            
+            
+    ques: display number from 0 to 9 using while loop
+            
+            #! /bin/sh
+            a=0
+            while[ $a -lt 10 ]
+            do 
+            echo $a
+            a= $(($a+1))
+            done
+            
+            
+            
+    ques:to print number 5,4,3,2,1 using while
+            #! /bin/sh
+            a=5
+            while[ $a -gt 0 ]
+            do 
+            echo $a
+            a= $(($a-1))
+            done
+            
+            
+            
+    ques: to print sum of digit of given number(123=6)
             
     
+            #! /bin/sh
+            read a
+            while[ $a -ne 0 ]
+            do 
+            b=$(($a % 10 ))
+            rem=$(($rem + $b))
+            a=$(($a/10))
+            done
+            echo $rem
+
+            
+            
+        
