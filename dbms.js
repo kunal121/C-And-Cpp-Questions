@@ -314,4 +314,19 @@ AGGREGATEOR MULTIPLE FUNCTIONS :
                 >
             > Multiple column 
                 >
-            
+                
+                
+                
+                
+    Tcl statements(transaction control language)
+    ____________________________________________
+    
+    Tcl is used to change behaviour of DML
+    
+    1 . commit -> saving of data is done .permanently saving of data . in future no changes can be done.
+    2 . rollback-> recover data from last savepoint/committed point . rest data is overwrited.
+    3. savepoint -> rollback to specific save point.
+    4 . set transaction
+
+    
+    
