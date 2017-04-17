@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+class abc
+{
+int a,b,c;
+public:
+friend istream & operator >> (istream &ob,abc &obj)
+{
+ob>>obj.a;
+ob>>obj.b;
+ob>>obj.c;
+return ob;
+}
+friend ostream & operator << (ostream &ob,abc &obj)
+{
+ob<<obj.a;
+ob<<obj.b;
+ob<<obj.c;
+return ob;
+}
+};
+int main()
+{
+abc df;
+cin>>df;
+cout<<df;
+
+}
