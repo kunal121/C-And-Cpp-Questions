@@ -961,6 +961,215 @@ EXPERIMENT 23 :
                                             MY_VAR = "Hello World"
 	                                        echo $MY_VAR
 
+            
+        mathemaics      operations
+            -eq         ==
+            -ne         !=
+            -lt         <
+            -le         <=
+            -gt            >
+            -ge         >=
+            
+            
+            
+            
+        Flow control
+            
+            1.   if<condition>
+                then
+                fi(end)
+            
+            2 . if <condition>
 
+                then
+                else
+                fi
+            
+            3 . if<condition>
+                then
+                elif<condition>
+                then
+                fi(end)
+            
+            
+    
+            eg    !/bin/sh
+            num =0
+            if[$num = = 0]
+            then 
+            echo "hello"
+            fi
+           
+            
+            exit =  sets the exi status when scripts finishes
+            
+                    exit 0 = exits your scope & sets exit to 0
+                    exit 1 = failure (sets to 1)
+            
+            
+            
+        Q . ques find even or odd through if condition
+            
+            #! /bin/sh
+            echo "enter variable"
+            read var
+            if [ $(( $var % 2 )) -eq 0 ]
+            then 
+            echo "even"
+            else
+            echo "odd"
+            fi
 
+        
+    Command Line arguments
+            
+            
+            $0 - script/file name
+            $1 - first argument 
+            $2 - second argument
+            $n - nth argument
+            $@ - all argument
+            $# - count all argument
+            
+            
+    rules:
+            contains alphabets digits & underscore 
+            no commas or blanks ./f1.sh 1 2
+            first character must be alphabet or number
+            
+            
+            
+    ques: command line input 2 number and sum their values
+            
+            #! /bin/sh
+            n=$1
+            n1=$2
+            echo $((n+n1))
+            if[ $# -eq 0 ]
+            then 
+            echo "command is incomplete"
+            else 
+            echo "command run successfully"
+            fi
+            
+            
+    ques: greatest of two numbers
+            
+            #! /bin/sh
+            n=$1
+            n1=$2
+            n2=$3
+            if [ $n -gt $n1 ] && [ $n -gt $n2 ]
+            then 
+            echo $n
+            elif[ $n1 -gt $n2 ] && [ $n1 -gt $n ]
+            then
+            echo $n1
+            else 
+            echo $n2
+            fi
+    
+            
+            
+            
+            
+    while loop 
+            
+            while<condition>
+            do
+                #statements
+            DocumentFragment
+            
+            
+            
+            
+    ques: display number from 0 to 9 using while loop
+            
+            #! /bin/sh
+            a=0
+            while[ $a -lt 10 ]
+            do 
+            echo $a
+            a= $(($a+1))
+            done
+            
+            
+            
+    ques:to print number 5,4,3,2,1 using while
+            #! /bin/sh
+            a=5
+            while[ $a -gt 0 ]
+            do 
+            echo $a
+            a= $(($a-1))
+            done
+            
+            
+            
+    ques: to print sum of digit of given number(123=6)
+            
+    
+            #! /bin/sh
+            read a
+            while[ $a -ne 0 ]
+            do 
+            b=$(($a % 10 ))
+            rem=$(($rem + $b))
+            a=$(($a/10))
+            done
+            echo $rem
 
+            
+    EXPERIMENT 33 : Creating, editing , saving & comparing files
+		    
+	-> echo "ENter first name"
+	   read a
+	   gedit $a
+	   echo "enter 2nd file name"
+		    read b
+		    gedit $b
+		    diff $a $b
+		    
+	OTHER FILE MANIPULATION OPERATIONS
+		    file = f1.sh
+		    if[-r file]
+		    then
+		    echo "file as readable"
+		    else
+		    echo "file is not readable"
+		    fi
+	2. [-w file] -> writable
+	3. [-x file] -> executble
+	4. [-d file] -> directory
+	5. [-e file] -> file exists
+		    
+	EXPERIMENT 32 : For loop
+		    
+		    1. for <variable> in <list>
+		    	do
+		    		#statements
+		    	done
+		    
+		    	example : 
+		    		for num in 1 2 3 4 5
+		    		do
+		    			sum=$(($sum+$num))
+		    		done
+		    			echo $sum
+		    2. c-like for loop -bash
+		    	for ((expr1;expr2;expr3))
+		    	do
+		    		#statements
+		    	done
+		    
+		    	example:
+		    	for ((c=1;c<=5;c++))
+		    	do
+		    		echo $c
+		    	done
+	EXPERIMENT 34 : 
+		    1. SHOW ALL AVAILABLE SHELLS : echo "'echo /etc/shells'"
+		    2. CPU INFO : "'cat /proc/cpuinfo'"
+		    3. MEMORY INFO : echo "'cat /proc/meminfo'"
+		    4. FILE SYSTEM MOUNTED INFO : echo "'cat /pro/mounts'"
+		    
