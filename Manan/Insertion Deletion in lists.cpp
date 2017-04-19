@@ -37,4 +37,12 @@ int main()
             cout<<*it<<" ";
     cout<<endl;
 
+
+    it=v.begin();
+    v.erase(it);
+    for(it=v.begin();it!=v.end();it++)
+            cout<<*it<<" ";
+    cout<<endl;
+
+
 }
