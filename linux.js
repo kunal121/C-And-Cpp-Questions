@@ -1120,5 +1120,84 @@ EXPERIMENT 23 :
             echo $rem
 
             
-            
-        
+    EXPERIMENT 33 : Creating, editing , saving & comparing files
+		    
+	-> echo "ENter first name"
+	   read a
+	   gedit $a
+	   echo "enter 2nd file name"
+		    read b
+		    gedit $b
+		    diff $a $b
+		    
+	OTHER FILE MANIPULATION OPERATIONS
+		    file = f1.sh
+		    if[-r file]
+		    then
+		    echo "file as readable"
+		    else
+		    echo "file is not readable"
+		    fi
+	2. [-w file] -> writable
+	3. [-x file] -> executble
+	4. [-d file] -> directory
+	5. [-e file] -> file exists
+		    
+	EXPERIMENT 32 : For loop
+		    
+		    1. for <variable> in <list>
+		    	do
+		    		#statements
+		    	done
+		    
+		    	example : 
+		    		for num in 1 2 3 4 5
+		    		do
+		    			sum=$(($sum+$num))
+		    		done
+		    			echo $sum
+		    2. c-like for loop -bash
+		    	for ((expr1;expr2;expr3))
+		    	do
+		    		#statements
+		    	done
+		    
+		    	example:
+		    	for ((c=1;c<=5;c++))
+		    	do
+		    		echo $c
+		    	done
+	EXPERIMENT 34 : 
+		    1. SHOW ALL AVAILABLE SHELLS : echo "'echo /etc/shells'"
+		    2. CPU INFO : "'cat /proc/cpuinfo'"
+		    3. MEMORY INFO : echo "'cat /proc/meminfo'"
+		    4. FILE SYSTEM MOUNTED INFO : echo "'cat /pro/mounts'"
+		    
+	EXPERIMENT 35 : 
+#! /bin/sh
+temp=`date|cut -c12-13`
+if [ $temp -lt 12 ]
+then
+message="Good Morning $LOGNAME"
+fi
+if [ $temp -gt 12 ] && [ $temp -lt 16 ]
+then
+message="Good Afternoon $LOGNAME"
+fi
+if [ $temp -gt 16 ] && [ $temp -lt 20 ]
+then
+message="Good Evening $LOGNAME"
+fi
+dialog --backtitle "LInux Shell Script" \
+	   --title "Welcome to linux" \
+	   --infobox "$message" 8 60
+		    
+	EXPERIMENT 36 : Printer commands : 
+		    1. lpr -> sends a job to printer
+		    	lpr -P <printer-name> -n <file-name>
+		    2. lpq -> displays printer queue including job no
+		    	lpq -P <printer-name>
+		    3. lprm -> removes job from printer queue
+		    	lprm -P <printer-name> <job-number>
+		    4. print -> sends job to printer
+		    	print -P <p-name> <file-name>
