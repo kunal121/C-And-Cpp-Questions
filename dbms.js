@@ -286,7 +286,8 @@ AGGREGATEOR MULTIPLE FUNCTIONS :
     
     >   Min : Minimum value in column 
     
-    >   Clauses : 
+
+>   Clauses : 
         
         > group by clause : groupby(serialNo) 
                             It cannot be applied on multiple columns
@@ -296,6 +297,7 @@ AGGREGATEOR MULTIPLE FUNCTIONS :
            
         > order by : Order by asc col_name : ascending order
                      Order by dsc col_name : ascending order
+
                      Order by null last col_name : ascending order
                         
     
@@ -305,7 +307,8 @@ AGGREGATEOR MULTIPLE FUNCTIONS :
         > It must be placed on the right side of comparison operator
         > We cannot use order by clause in subquery
         > Use single row operator with single row subquery
-        > If a subquery returns a null value to outer query , the outer query will not return any rows when using certain compariosn operator in where clause
+
+         > If a subquery returns a null value to outer query , the outer query will not return any rows when using certain compariosn operator in where clause
         
         TYPES : 
             > Single Row
@@ -327,6 +330,58 @@ AGGREGATEOR MULTIPLE FUNCTIONS :
     2 . rollback-> recover data from last savepoint/committed point . rest data is overwrited.
     3. savepoint -> rollback to specific save point.
     4 . set transaction
+    
+    -> create user1 in sysdba 
+    -> when try to login(conn user1/user1)...logon denied will come
+    -> we will provide create session permission
+    -> COMMAND :  
+    conn / as sysdba (go in sysdba and grant user1)
+    grant create session,create table to user1
+    -> conn user1/user1
+    -> create table table1 (name varchar(30))
+    -> above command will not work. There will be error : no privileges on tablespace 'SYSTEM'
+    -> this happens as sysdba and hr have a mermory allocated in oracle by default but we didnot allocate for user1
+    -> now login into sysdba
+    -> COMMAND : 
+    conn / as sysdba
+    alter user user1 quota 50m on users                       (50m means 50 megabits and users is the default tablespace)
+    alter database default tablespace users                   ( all tables created wil be allocated by default into the users tableespace )
+    
 
+    CREATE NEW USER : 
+    ----------------
+    conn / as sysdba;
+    create user user2 identified by user2;
+    grant create table,create session to user2;
+    alter user user2 quota 50m on users;
+    alter database default tablespace users;
+    conn user2/user2;
     
+    USER1 WANTS TO ACCESS TABLE OF USER2:
+    -------------------------------------
+    conn / as sysdba;
+    grant select,insert on usr2.sample to user1;
+    conn user1/user1;
+    select * from user2.sample;
     
+    REVOKE PERMISSIONS:
+    -------------------
+    conn user2/user2;
+    revoke insert on user2.sammple from user1;
+
+    Views : 
+	-------
+		These are virtual tables generated to display particular data from database to particular user.
+		SYNTAX  :
+			to create : 
+				create view view_name as select * from employees
+			to update : 
+				create or replace view_name as select * from employees
+			drop : 
+				drop view_name
+			insert : 
+				insert into view_name (col) values (value)
+			read only view :
+			create view view1 as select * from employees with read only
+			insert,update cannot be performed on read-only view
+   

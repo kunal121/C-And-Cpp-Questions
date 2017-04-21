@@ -1173,3 +1173,31 @@ EXPERIMENT 23 :
 		    3. MEMORY INFO : echo "'cat /proc/meminfo'"
 		    4. FILE SYSTEM MOUNTED INFO : echo "'cat /pro/mounts'"
 		    
+	EXPERIMENT 35 : 
+#! /bin/sh
+temp=`date|cut -c12-13`
+if [ $temp -lt 12 ]
+then
+message="Good Morning $LOGNAME"
+fi
+if [ $temp -gt 12 ] && [ $temp -lt 16 ]
+then
+message="Good Afternoon $LOGNAME"
+fi
+if [ $temp -gt 16 ] && [ $temp -lt 20 ]
+then
+message="Good Evening $LOGNAME"
+fi
+dialog --backtitle "LInux Shell Script" \
+	   --title "Welcome to linux" \
+	   --infobox "$message" 8 60
+		    
+	EXPERIMENT 36 : Printer commands : 
+		    1. lpr -> sends a job to printer
+		    	lpr -P <printer-name> -n <file-name>
+		    2. lpq -> displays printer queue including job no
+		    	lpq -P <printer-name>
+		    3. lprm -> removes job from printer queue
+		    	lprm -P <printer-name> <job-number>
+		    4. print -> sends job to printer
+		    	print -P <p-name> <file-name>
