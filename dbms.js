@@ -286,7 +286,8 @@ AGGREGATEOR MULTIPLE FUNCTIONS :
     
     >   Min : Minimum value in column 
     
-    >   Clauses : 
+
+>   Clauses : 
         
         > group by clause : groupby(serialNo) 
                             It cannot be applied on multiple columns
@@ -296,6 +297,7 @@ AGGREGATEOR MULTIPLE FUNCTIONS :
            
         > order by : Order by asc col_name : ascending order
                      Order by dsc col_name : ascending order
+
                      Order by null last col_name : ascending order
                         
     
@@ -305,7 +307,8 @@ AGGREGATEOR MULTIPLE FUNCTIONS :
         > It must be placed on the right side of comparison operator
         > We cannot use order by clause in subquery
         > Use single row operator with single row subquery
-        > If a subquery returns a null value to outer query , the outer query will not return any rows when using certain compariosn operator in where clause
+
+         > If a subquery returns a null value to outer query , the outer query will not return any rows when using certain compariosn operator in where clause
         
         TYPES : 
             > Single Row
@@ -365,5 +368,20 @@ AGGREGATEOR MULTIPLE FUNCTIONS :
     -------------------
     conn user2/user2;
     revoke insert on user2.sammple from user1;
-    
+
+    Views : 
+	-------
+		These are virtual tables generated to display particular data from database to particular user.
+		SYNTAX  :
+			to create : 
+				create view view_name as select * from employees
+			to update : 
+				create or replace view_name as select * from employees
+			drop : 
+				drop view_name
+			insert : 
+				insert into view_name (col) values (value)
+			read only view :
+			create view view1 as select * from employees with read only
+			insert,update cannot be performed on read-only view
    
