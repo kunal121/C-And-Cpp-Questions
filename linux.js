@@ -406,7 +406,7 @@ Program that stimulates as a standalone TERMINAL
 
     >  Add break points
 
-    	break [filename]:line-number
+    	break [filename]:line-numbertime
     or
     	break f1.c : main <-(func name)
 
@@ -449,7 +449,7 @@ Types of files:
     special files (c) : character files , allows user to communicate with h/w devices 
                         ls -c /dev
     Sockets (s) : special files , similar to TCP/IP sockets provide IPC
-                    ls -l /dev/log
+                    ls -s /dev/log
     Named pipe (p) : acts more or like , form a way of process
     Symbolic links (l) : can be considered as pointer to original files
     Block device files (b) : provides access to device in such a way that h/w characteristics of device are not visible.
@@ -505,7 +505,7 @@ PATCH FILE :
             diff -u file1 file2 > f3.patch
     2. Apply patch using patch command 
             takes patch file as input and applies the difference to one or more original file
-            patch < f3.patch
+            patch filename < f3.patch
     
 GEDIT :
 
@@ -626,7 +626,7 @@ EXP 17 :
                               \n -> new line
                               \t -> horizontal tab
                               \v -> vertical tab
-                              \r -> carriage return
+                              \r -> carriage retadduurn
                               \c -> supresses
                               
         2.  host -> DNS lookup uility.
@@ -647,7 +647,7 @@ EXP 17 :
                      ex : nslookup google.com
                           nslookup 134.170.185.46
                           
-                          Quering different records : nslookup -types=ns google.com
+                          Quering different records : nslookup -type=ns google.com
         
         4.  ping -> to test connectivity between 2 nodes
                  -> ping google.com
@@ -670,8 +670,11 @@ EXP 17 :
                     
         7.  ip -> performs manipulation of ip addresses
                         ip 192.168.4.2
-               -> suppress binary o/p
+               -> a suppress binary o/p
                
+    
+EXPERIMENT 18 : 
+---------------
     
     FINGER : user info lookup program.
              if no argument passed , displays info about current user
@@ -691,7 +694,7 @@ EXP 17 :
                 
     IPCONFIG :  interface configuration
                 used to view or configure the network interface
-                ipconfig -> displays info about all n/w interfaces currently in option
+            config -> displays info about all n/w interfaces currently in option
                 1. to view all interfaces -> ifconfig -a
                 2. to view configuration of specific interface -> ifconfig eth0
                 3. enabling or disabling interface -> ifconfig eth0 up/down
@@ -702,5 +705,499 @@ EXP 17 :
          ip route show -> check route table
          ip link set eth0 up/down -> enable/disable a new interface
          
+         
     ROUTE : show / manipulate ip routing tables.
+            display existing route
                 
+                OPTIONS :
+                    >   -n : to display numerical ip address
+                    
+                To add default gateway -> route add default gw 192.168.1.0
+
+    WRITE : sends message to another user
+                    allows you to communicate by copying from your terminal to another 
+                    
+                    write [user-name] [message]      Ctrl+c to end message 
+                    
+    MESG : controls write access to your terminal
+    
+            mesg [n/y]
+            
+            > mesg : displays current status of terminal
+            > mesg Y : allows user to send your message
+            
+    
+    IPTABLES : Displays policy rules to allow or block traffic 
+        3 types : 
+            >   input : to control behaviour of incoming connection
+            >   forward : forward incoming connection to its target
+            >   output : for outgoing connection
+            
+            iptables -L 
+            
+    MAIL : send and receive mail 
+    
+        sudo apt-get update mailutils
+
+        
+EXPERIMENT 19 : ADDING OR REMOVING USER
+
+    1. adduser : sudo adduser <username>
+    2. su : to switch between b/w users
+                su <username>
+    3. usermod : to add a user to group 
+                    usermod -aG sudo <username>
+            
+    4. userdel : to delete user
+                    userdel <username>
+            
+    5. username : to change password if logged in as root
+                    username <new password>
+    6. password : change password if logged in as user
+                    password <username>
+    7. to create or delete groups : 
+                groupadd <username>
+                groupdel <groupname>
+            
+EXPERIMENT 22 :
+            
+PROCESS ORIENTED COMMANDS
+-------------------------
+            
+            1. ps : displays status of currently running processes
+                    shows processes associated with current user & terminal session
+            2. ps aux : shows owner of processes
+            3. ps -ag : to get info about all running processes
+            4. ps -f : displays `` info in long format with parent process.
+            5. pstree : displays tree of processes
+            6.txt ps ax | grep : to see if a particular process is running or not
+            7. top : displays processes dynamical (to exit enter q)
+            8. kill : sends a signal to processcd ..
+            
+                      by default , signal is to terminate
+                    
+                    > kill [pid]
+                    > killall [process-name] : to stop process by  process name
+                    > kill 0 : to kill all processes except your shell
+                    > kill -l : display number of each signal 
+                        ex : kill -9 
+
+EXP 21 :
+
+        INTRO TO NETWORKS 
+        -----------------
+            
+            Steps to configure a network interface
+                > ifconnfig
+                > ping
+                > traceroute
+            
+        Browers in Ubuntu 
+        -----------------
+                
+            > Firefox 
+            > Chromiumclea
+            > Opera
+            > Dillo
+            > Konqeron
+            
+            
+        TRANSFERING FILES FROM UBUNTU TO WINDOWS
+        ----------------------------------------
+            
+            > right click on folder and select 'sharing options'
+            > when prompted, install samba services
+            > after innstallation, restart session
+            > click 'create share' to complete process
+            > open terminal 
+                sudo smbpasswd -a <user-name>
+            > on windows 
+                run \\ip-address\filename
+            > To access file
+                enter samba username & password
+            
+            
+            
+            
+EXPERIMENT 23 : 
+            
+        Process Scheduing Commands
+        --------------------------
+            
+            1. at : schedling command to be run once at a particular time
+                        ex : at 9:30pm
+                             at > ls -l > terminal name (search using tty)
+                             at > Ctrl + D
+            
+            EXPRESSION FOR TIME :
+                
+                > noon
+                > midnight
+                > tomorrow
+                > noon tomorrow
+                > next week
+                > next monday
+            
+                    now + 1 min
+                    now + 2 days
+                    now + 1 month
+                    now + 5 years
+            
+                    2:30pm friday
+                    fri
+                    Nov
+                    2.30 pm 10/21/2014
+                
+                USING MAIL : 
+            
+                    > Install MTA
+                    > sudo service sendmail start
+                    > at now + 2 min
+                        at > echo 'hello'
+                        at > Ctrl + D
+                    > mutt -f /var/spool/mail/<username>
+
+            2. atq : to view currently queued at jobs
+            3. atrm : to delete jobs
+                    atrm 23
+            
+            
+            > CRONTAB COMMAND : list of commands that you want to run on a regular schedule and also the name of command used to manage that list
+            
+                To edit crontab : crontab -e
+
+	EXPERIMENT 24 : 
+			
+	> sort : sotrs contents of a file, line by line
+					 sorted numerically and alphabetically
+			
+		Rules : 
+			> lines starting with num apprear first
+			> lines starting with a letter appearing earlier in alphabets will appear before
+			> line with lowercas letter appears before uppercase letter
+			
+
+	> grep
+	> diff
+	> uniq : filters out repeated lines in a file
+
+		uniq <file-name>
+	
+		options : 
+			-c : prefixes lines with no. of occurences
+			-r : print duplicate lines only
+			-u : prints unique lines		
+
+	> more : filter for crt viewing
+			 displays text, one screen at a time
+				more filename
+
+		options : 
+		 > -num : no of lines to be displayed
+		 > more +3 file : displays contents of file from line 3
+		 > more +/"string" file : displays contents of file with "string"
+
+
+	> redirection operators : 
+		to redirect o/p or i/p somewhere else 
+		> command o/p to file or device
+		 	ls -l > f1
+		< reads command i/p from a line
+			grep "a" < f1
+		<< appends the command o/p to end of filel
+		
+
+		\ -> reads o/p fromone command & writes it as i/p to another command
+
+				ls \ grep "f"
+			 
+
+    EXPERIMENT 25 : Bash Shell Scripting
+    ------------------------------------
+                
+            Shell : Interface which is used to command the kernel to so some work.
+                types : bash
+                        csh
+                        ksh
+                        tsch
+            
+            To find all available shells : cat /etc/shell
+            To find your current shell type : echo $SHELL
+            
+            Shell Script : 
+                    series of commands written on plain text file
+            Features : automates task
+                       provides controlled interfae to users 
+                       create new commands using combinations of utilities 
+                       prototyping. 
+            SYNTAX :
+                # -> comment (except \# , #!)
+                \ -> used at end of line,to indicate continuation to next line
+                ; -> used to interpret what follows is a command
+                $ -> indicates what follows is a variable
+            
+            STEPS : 
+            
+            1. first.sh ->  #! /bin/sh (specify on which shell you are working)
+                            #comment
+                            echo "hello world"
+                            Save the .sh file and open terminal
+            2. grant permissions ->  chmod +x first.sh
+            3. execute the .sh file -> ./first.sh
+            
+            System & User defined variables -: 
+                    1. System variable : 
+                            pwd
+                            bash
+                            ostype
+                            home
+                            username
+                            shell
+
+            user defined variables : created and maintained by user
+                                        VAR=value
+                                    example : 
+                                            #! /bin/sh
+                                            MY_VAR = "Hello World"
+	                                        echo $MY_VAR
+
+            
+        mathemaics      operations
+            -eq         ==
+            -ne         !=
+            -lt         <
+            -le         <=
+            -gt            >
+            -ge         >=
+            
+            
+            
+            
+        Flow control
+            
+            1.   if<condition>
+                then
+                fi(end)
+            
+            2 . if <condition>
+
+                then
+                else
+                fi
+            
+            3 . if<condition>
+                then
+                elif<condition>
+                then
+                fi(end)
+            
+            
+    
+            eg    !/bin/sh
+            num =0
+            if[$num = = 0]
+            then 
+            echo "hello"
+            fi
+           
+            
+            exit =  sets the exi status when scripts finishes
+            
+                    exit 0 = exits your scope & sets exit to 0
+                    exit 1 = failure (sets to 1)
+            
+            
+            
+        Q . ques find even or odd through if condition
+            
+            #! /bin/sh
+            echo "enter variable"
+            read var
+            if [ $(( $var % 2 )) -eq 0 ]
+            then 
+            echo "even"
+            else
+            echo "odd"
+            fi
+
+        
+    Command Line arguments
+            
+            
+            $0 - script/file name
+            $1 - first argument 
+            $2 - second argument
+            $n - nth argument
+            $@ - all argument
+            $# - count all argument
+            
+            
+    rules:
+            contains alphabets digits & underscore 
+            no commas or blanks ./f1.sh 1 2
+            first character must be alphabet or number
+            
+            
+            
+    ques: command line input 2 number and sum their values
+            
+            #! /bin/sh
+            n=$1
+            n1=$2
+            echo $((n+n1))
+            if[ $# -eq 0 ]
+            then 
+            echo "command is incomplete"
+            else 
+            echo "command run successfully"
+            fi
+            
+            
+    ques: greatest of two numbers
+            
+            #! /bin/sh
+            n=$1
+            n1=$2
+            n2=$3
+            if [ $n -gt $n1 ] && [ $n -gt $n2 ]
+            then 
+            echo $n
+            elif[ $n1 -gt $n2 ] && [ $n1 -gt $n ]
+            then
+            echo $n1
+            else 
+            echo $n2
+            fi
+    
+            
+            
+            
+            
+    while loop 
+            
+            while<condition>
+            do
+                #statements
+            DocumentFragment
+            
+            
+            
+            
+    ques: display number from 0 to 9 using while loop
+            
+            #! /bin/sh
+            a=0
+            while[ $a -lt 10 ]
+            do 
+            echo $a
+            a= $(($a+1))
+            done
+            
+            
+            
+    ques:to print number 5,4,3,2,1 using while
+            #! /bin/sh
+            a=5
+            while[ $a -gt 0 ]
+            do 
+            echo $a
+            a= $(($a-1))
+            done
+            
+            
+            
+    ques: to print sum of digit of given number(123=6)
+            
+    
+            #! /bin/sh
+            read a
+            while[ $a -ne 0 ]
+            do 
+            b=$(($a % 10 ))
+            rem=$(($rem + $b))
+            a=$(($a/10))
+            done
+            echo $rem
+
+            
+    EXPERIMENT 33 : Creating, editing , saving & comparing files
+		    
+	-> echo "ENter first name"
+	   read a
+	   gedit $a
+	   echo "enter 2nd file name"
+		    read b
+		    gedit $b
+		    diff $a $b
+		    
+	OTHER FILE MANIPULATION OPERATIONS
+		    file = f1.sh
+		    if[-r file]
+		    then
+		    echo "file as readable"
+		    else
+		    echo "file is not readable"
+		    fi
+	2. [-w file] -> writable
+	3. [-x file] -> executble
+	4. [-d file] -> directory
+	5. [-e file] -> file exists
+		    
+	EXPERIMENT 32 : For loop
+		    
+		    1. for <variable> in <list>
+		    	do
+		    		#statements
+		    	done
+		    
+		    	example : 
+		    		for num in 1 2 3 4 5
+		    		do
+		    			sum=$(($sum+$num))
+		    		done
+		    			echo $sum
+		    2. c-like for loop -bash
+		    	for ((expr1;expr2;expr3))
+		    	do
+		    		#statements
+		    	done
+		    
+		    	example:
+		    	for ((c=1;c<=5;c++))
+		    	do
+		    		echo $c
+		    	done
+	EXPERIMENT 34 : 
+		    1. SHOW ALL AVAILABLE SHELLS : echo "'echo /etc/shells'"
+		    2. CPU INFO : "'cat /proc/cpuinfo'"
+		    3. MEMORY INFO : echo "'cat /proc/meminfo'"
+		    4. FILE SYSTEM MOUNTED INFO : echo "'cat /pro/mounts'"
+		    
+	EXPERIMENT 35 : 
+#! /bin/sh
+temp=`date|cut -c12-13`
+if [ $temp -lt 12 ]
+then
+message="Good Morning $LOGNAME"
+fi
+if [ $temp -gt 12 ] && [ $temp -lt 16 ]
+then
+message="Good Afternoon $LOGNAME"
+fi
+if [ $temp -gt 16 ] && [ $temp -lt 20 ]
+then
+message="Good Evening $LOGNAME"
+fi
+dialog --backtitle "LInux Shell Script" \
+	   --title "Welcome to linux" \
+	   --infobox "$message" 8 60
+		    
+	EXPERIMENT 36 : Printer commands : 
+		    1. lpr -> sends a job to printer
+		    	lpr -P <printer-name> -n <file-name>
+		    2. lpq -> displays printer queue including job no
+		    	lpq -P <printer-name>
+		    3. lprm -> removes job from printer queue
+		    	lprm -P <printer-name> <job-number>
+		    4. print -> sends job to printer
+		    	print -P <p-name> <file-name>
