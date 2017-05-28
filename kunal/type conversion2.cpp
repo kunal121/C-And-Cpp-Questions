@@ -42,3 +42,4 @@ int main ()
     desig=s2;
     cout<<desig;
 }
+
