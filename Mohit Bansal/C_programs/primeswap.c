@@ -1,0 +1,46 @@
+#include<stdio.h>
+void main()
+{
+    int i,j,k=0,a[20],count1=0,count,n,b[20],l=0,count2;
+printf("entr no.");
+scanf("%d",&n);
+for(i=1;i<=n;i++)
+{
+count=0;
+for(j=2;j<=i/2;j++)
+{
+     if(i%j==0)
+         {
+            count++;
+             break;
+        }
+ }
+ if(count==0&&i!=1)
+ {
+     a[k]=i;
+     k++;
+     count1++;
+ }
+}
+printf("count1=%d\n",count1);
+for(k=0;k<(count1);k++)
+{
+    printf("%d",a[k]);
+}
+printf("\n");
+count2=count1;
+/*for(l=0;l<count2;l++)
+{
+    b[l]=a[count1-1];
+    count1--;
+}
+printf("\n");
+for(l=1;l<(count2);l++)
+{
+    printf("%d",b[l]);
+}*/
+for(k=(count1-2);k>=0;k--)
+{
+    printf("%d",a[k]);
+}
+}
