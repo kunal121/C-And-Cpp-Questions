@@ -4,6 +4,8 @@
 
 >   Create
 -----------
+            creates table
+            => create table table_name(col1 datatype,col2 datatype);
 >   Drop =>
 -----------
         Permanently delete the table
