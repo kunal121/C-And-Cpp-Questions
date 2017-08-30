@@ -414,4 +414,151 @@ CONTINUE :
 		handle
 		end;
 
+		2.1 Defining/Declaring Exception
+		2.2 Raise exception
+		2.3 Handle Exception
+		SYNTAX : 
+			DECLARE
+			exception_name EXCEPTION;
+			BEGIN
+			if condition
+			then
+			RAISE exception_name
+			END
+			EXCEPTION
+			WHEN exception_name
+			then
+			----statement----
+			END;
+
+		FOR EXAMPLE : 
+			declare 
+			empno emp.ID % type;
+			ename emp.Name % type;
+			name_exception EXCEPTION;
+			begin
+			empno := :no;
+			ename := :name;
+			if ename is NULL
+			then 
+			raise name_exeption
+			end if
+			insert into emp(ID,Name) values (empno,ename);
+			dbms_output.put_line("Data insert successfull!")
+			EXCEPTION
+			when name_exception
+			then 
+			dbms_output.put_line("Data insert failed!");
+			END;
+		EXAMPLE 2 :
+			declare
+			a number(2) := :a;
+			b number(2) := :b;
+			c number(2);
+			one_divide EXCEPTION;
+			begin
+			if b=1 then
+			raise one_divide;
+			end if;	
+			c := a/b;
+			dbms_output.put_line(c);
+			exception	
+			when one_divide then
+			dbms_output.put_line('no need to divide by 1');
+			when zero_divide then
+			dbms_output.put_line('zero divide exception');
+			when others then
+			dbms_output.put_line('other exception');
+			end
+		EXAMPLE 3 :
+			declare 
+			x number(10) := :a;
+			a exception;
+			b exception;
+			c exception;
+			begin
+			begin
+			if x=1 then
+			raise a;
+			elsif x=2 then
+			raise b;
+			else
+			raise c;
+			end if;
+			exception
+			when a then
+			dbms_output.put_line('a exception');
+			end;
+			exception
+			when b then
+			dbms_output.put_line('b exception');
+			end;
+			
+	EXCEPTION SCOPE : 
+		declare
+		demo exception;
+		begin
+		declare
+		demo exception;
+		due_date date := sysdate - 1;
+		todays_date date:= sysdate;
+		begin 
+		if due_date < todays_date then
+		raise demo;
+		end if;
+		end;
+		exception
+		when demo then
+		dbms_output.put_line('handle demo');
+		when other then
+		dbms_output.put_line('other exception');
+		end;
+
+	RERAISNG EXCEPTION: 
+		declare
+		sal int;
+		cur_sal int:=:cur_sal;
+		max_salary int:=:max_salary;
+		salary_high exception;
+		begin
+		begin
+		if cur_sal > max_salary then
+		raise salaty_high;
+		end if;
+		exception
+		when salary_hight then
+		dbms_output.put_line('salary too high');
+		raise;
+		end;
+		exception
+		when salary_high then
+		sal := curr_sal;
+		curr_sal := max_salary;
+		dbms_output.put_line('salary range is' || sal || 'to' || cur_sal);
+		end;
+
+	PRAGMA EXCEPTION : 
+		To handle error condition that have no predefined name.
+		
+		declare
+		ndept dep.dno%type;
+		begin
+		ndept:=:ndept;
+		delete from dept where dno = ndept;
+		end;
+		---------------------------------
+		input : 101
+		Error ORA-02292
+
+		declare 
+		ndept dept.dno%type;
+		child_found exception;
+		pragma exceprion_init(child_found)
+		begin
+		ndept := :ndept;
+		delete from dept where dno = ndept;
+		exception
+		when child_found then
+		dbms_output.put_line('child found');
+		end;
 		
