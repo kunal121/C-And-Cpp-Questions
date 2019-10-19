@@ -7,7 +7,7 @@ printf("Enter the text ");
 gets(a);
 printf("Enter the position to be picked");
 scanf("%d",&n);
-printf("Enter the number of char to be copied");
+printf("Enter the number of characters to be copied");
 scanf("%d",&m);
 c=strlen(a);
 p=&a;
