@@ -20,6 +20,5 @@ main()
     for(i=0;i<m;i++)
     {
         printf(" \n enter the value of n[%d] : %d",i,n[i]);
-
     }
 }
