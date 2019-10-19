@@ -2,7 +2,7 @@
 void main()
 {
     int n,a[50],i,temp;
-    printf("Enter the number of elements of array\n");
+    printf("Enter the number of elements in array\n");
     scanf("%d",&n);
     printf("Enter the elements of array\n");
     for(i=0;i<n;i++)
