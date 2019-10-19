@@ -7,3 +7,5 @@ c=10 + d++;
 printf("%d\n",b);
 printf("%d\n",c);
 }
+
+/*post increment and pre increment*/
